@@ -1,265 +1,57 @@
-/* Body styles */
-/* Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Passion+One&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Mallanna&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Passero+One&display=swap');
-
-html {
-    scroll-behavior: smooth;
-}
-
-body {
-    font-family: 'Mallanna', sans-serif;
-    background-color: #F4F4F4;
-    text-align: justify;
-}
-
-h1,h2 {
-    font-family: 'Mallanna', sans-serif;
-    text-align: center;
-    color: #E17192;
-}
-
-h2 {
-    font-size: 2.5rem;
-}
-
-h3,h4,h5,h6 {
-    color: #840C1A;
-    font-family: 'Passero One', cursive;
-}
-
-@media only screen and (max-width: 500px) {
-    .main-content {
-        margin-left: 5%;
-        margin-right: 5%;
-    }
-}
-
-
-
-/* Navbar */
-.navbar-nav {
-    margin-left: auto;
-}
-
-.nav-link {
-    color: #E17192 !important;
-    font-family: 'Passion One', cursive;
-    margin: auto 1rem;
-    font-size: 1.4rem;
-    font-weight: 400;
-}
-
-.nav-link:hover,.nav-link:focus,.nav-link:active {
-    color: #BB1646 !important;
-}
-
-.nav-link-active {
-    color: #BB1646 !important;
-}
-
-.navbar-toggler:focus,
-.navbar-toggler:active,
-.navbar-toggler-icon:focus {
-    outline: none;
-    box-shadow: none;
-}
-
-@media only screen and (max-width: 800px) {
-    .nav-item {
-        margin-top: 1%;
-    }
-}
-
-
-
-/* Small buttons */
-.small-btn {
-    background-color: #AD385B;
-    color: white;
-    outline: none !important;
-    border: none !important;
-    border-radius: 30px;
-    float: right;
-    font-size: 1.1rem;
-    font-weight: 500;
-}
-
-.small-btn:hover,.small-btn:active,.small-btn:focus {
-    background-color: #922b48;
-    outline: none !important;
-    box-shadow: none !important;
-    border: none !important;
-}
-
-
-
-/* Big buttons */
-.bigbtn {
-    background-color: #AD385B;
-    color: white;
-    outline: none !important;
-    border: none !important;
-    border-radius: 30px;
-    font-size: 1.3rem;
-    font-family: 'Passero One', cursive;
-    font-weight: 500;
-    padding: 2% 6%;
-    box-shadow: 6px 6px 25px 3px rgb(174, 141, 141);
-    -webkit-box-shadow: 6px 6px 25px 3px rgb(174, 141, 141);
-    -moz-box-shadow: 6px 6px 25px 3px rgb(174, 141, 141);
-}
-
-.bigbtn:hover,.bigbtn:active,.bigbtn:focus {
-    background-color: #922b48;
-    outline: none !important;
-    box-shadow: none !important;
-    border: none !important;
-}
-
-
-
-/* Footer */
-footer {
-	margin-top: 70px;
-	padding: 40px 0 0 0;
-    background-color: #FF914D;
-	color: #840C1A;
-	text-align: left;
-}
-
-.footer-sticky {
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-}
-
-.footer-right {
-	text-align: left;
-}
-
-.footer-link {
+@import url('https://fonts.googleapis.com/css2?family=Allison&family=Ubuntu+Condensed&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
     text-decoration: none;
-    color: #BB1646;
-    margin-left: 2%;
-    float: right;
+}
+
+.max-width {
+    max-width: 1300px;
+    padding: 0 80px;
+    margin: auto;
+}
+
+/* navbar styling */
+.navbar {
+    position: fixed;
+    width: 100%;
+    padding: 15px 0;
+    background: crimson;
+    font-family: 'Ubuntu Condensed', sans-serif;
+}
+
+.navbar .max-width {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar .logo a{
+    color: #fff;
+    font-size: 35px;
     font-weight: 600;
 }
 
-.footer-link:hover,.footer-link:active,.footer-link:focus {
-    color: #8d1033;
+.navbar .menu li {
+    list-style: none;
+    display: inline-block;
 }
 
-@media only screen and (max-width: 768px) {
-    .footer-right {
-        margin-left: 2%;
-        margin-bottom: 3%;
-    }
+.navbar .menu li a {
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+    margin-left: 25px;
 }
 
-
-
-/* Scroll to top arrow */
-#return-to-top {
-    position: fixed;
-    bottom: 20px;
-    left: 20px;
-    background: #ffcc00b6;
-    width: 50px;
-    height: 50px;
-    display: block;
-    text-decoration: none;
-    -webkit-border-radius: 35px;
-    -moz-border-radius: 35px;
-    border-radius: 35px;
-    display: none;
-    -webkit-transition: all 0.3s linear;
-    -moz-transition: all 0.3s ease;
-    -ms-transition: all 0.3s ease;
-    -o-transition: all 0.3s ease;
-    transition: all 0.3s ease;
-}
-
-#return-to-top i {
-    color: #BB1646;
-    margin: 0;
-    position: relative;
-    right: 16px;
-    left: 16px;
-    top: 13px;
-    font-size: 19px;
-    -webkit-transition: all 0.3s ease;
-    -moz-transition: all 0.3s ease;
-    -ms-transition: all 0.3s ease;
-    -o-transition: all 0.3s ease;
-    transition: all 0.3s ease;
-}
-
-#return-to-top:hover {
-    background: #E17192;
-}
-
-#return-to-top:hover i {
-    color: #BB1646;
-    top: 5px;
-}
-
-
-
-/* Top content responsive */
-.top-con {
-    margin-top: 12%;
-}
-
-@media screen and (max-width: 1200px)
-{
-    .top-con {
-        margin-top: 15%;
-    }
-}
-
-@media screen and (max-width: 600px)
-{
-    .top-con {
-        margin-top: 30%;
-    }
-}
-
-
-
-/* Homepage and landpage */
-
-.welcome-text {
-    font-family: 'Passion One', cursive;
-    font-size: 1.3rem;
-    color: #840C1A;
-    font-weight: 200 !important;
-    float: right;
-}
-
-.welcome-img {
-    width: 300px;
-}
-
-.opt-nonlink {
-    color: #AD385B !important;
-    font-family: 'Passero One', cursive;
-    font-size: 1.3rem;
-    text-decoration: none !important;
-    font-weight: 400;
-    text-decoration: none;
-}
-
-@media only screen and (max-width: 768px)
-{
-    .welcome-text {
-        float: none !important;
-        margin-left: 20px;
-    }
-
-    .welcome-img {
-        width: 210px;
-    }
+/* Home section styling */
+.home {
+    display: flex;
+    background: url("") no-repeat center;
+    height: 100vh;
+    color: #fff;
+    min-height: 500px;
+    font-family: 'Ubuntu Condensed', sans-serif;
+    
 }
