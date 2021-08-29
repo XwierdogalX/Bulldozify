@@ -16,9 +16,15 @@
 .navbar {
     position: fixed;
     width: 100%;
+    padding: 30px 0;
+    /* background: crimson; */
+    font-family: 'Ubuntu Condensed', sans-serif;
+    transition: all 0.3s ease;
+}
+
+.navbar.sticky {
     padding: 15px 0;
     background: crimson;
-    font-family: 'Ubuntu Condensed', sans-serif;
 }
 
 .navbar .max-width {
@@ -27,10 +33,19 @@
     justify-content: space-between;
 }
 
-.navbar .logo a{
+.navbar .logo a {
     color: #fff;
     font-size: 35px;
     font-weight: 600;
+}
+
+.navbar .logo a span {
+    color: rgb(216, 195, 111);
+    transition: all 0.3s ease;
+}
+
+.navbar.sticky .logo a span {
+    color: #fff;
 }
 
 .navbar .menu li {
@@ -43,6 +58,22 @@
     font-size: 18px;
     font-weight: 500;
     margin-left: 25px;
+    transition: color 0.3s ease;
+}
+
+.navbar .menu li a:hover {
+    color: rgb(216, 195, 111);
+}
+
+.navbar.sticky .menu li a:hover {
+    color: #fff;
+}
+
+/* Menu button styling */
+.menu-btn {
+    color: #fff;
+    font-size: 23px;
+    cursor: pointer;
 }
 
 /* Home section styling */
@@ -72,4 +103,9 @@
 .home .home-content .text-3 {
     font-size: 27px;
     margin: 5px 0;
+}
+
+.home .home-content .text-3 span {
+    color: rgb(216, 195, 111);
+    font-weight: 500;
 }
